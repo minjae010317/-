@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #FFF8F3;
+    --secondary-color: #A3E4DB;
+    --accent-color: #1C6DD0;
+    --extra-color: #FED1EF;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+    color: #333;
+    line-height: 1.8;
+    background-color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+    background-color: var(--primary-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 1100px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+    text-align: center;
+}
+
+header nav ul li:hover {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+main {
+    max-width: 100vw;
+}
+
+/* section {
+    padding: 0 40px;
+}
+
+footer {
+    padding: 0 40px;
+} */
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px 0;
+}
+
+/* ------------------------------------------------- */
+
+#home {
+    background-color: var(--primary-color);
+    height: 450px;
+}
+
+#home .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#home span.name {
+    font-size: larger;
+    color: var(--accent-color);
+}
+
+#home img {
+    position: relative;
+    top: 100px;
+    border-radius: 15px;
+}
+
+#home #history {
+    margin-top: 1rem;
+}
+
+#home #history li {
+    margin: 8px 0;
+}
+
+#home #history .date {
+    background-color: var(--extra-color);
+    padding: 1px 6px;
+    border-radius: 6px;
+}
+
+/* -------------------------------------------------------- */
+
+/* #about {
+    padding: 20px 40px;
+} */
+
+#about h2 {
+    margin-bottom: 1rem;
+}
+
+#about h2 span {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+#about details {
+    border: 2px dotted var(--secondary-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 60%;
+}
+
+#about details > summary {
+    font-size: larger;
+    cursor: pointer;
+}
+
+#about details div {
+    padding: 1rem;
+}
+
+#about details a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#about figure {
+    border: 2px solid var(--accent-color);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+#skills {
+    background-color: var(--secondary-color);
+}
+
+#skills .container {
+    padding: 1rem 0;
+}
+
+#skills table {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+#skills table i {
+    font-size: 4rem;
+}
+
+#skills table .accent::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    border: 4px solid var(--accent-color);
+    border-radius: 10px;
+    height: 4rem;
+    width: 4rem;
+}
+
+#skills table td {
+    padding: 0 10px;
+}
+
+#skills table tr td:first-child {
+    font-weight: bold;
+}
+
+#projects h2 {
+    margin-bottom: 1rem;
+}
+
+#projects .card {
+    display: flex;
+    padding: 20px;
+    padding-top: 8px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#projects .card figure {
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+#projects .card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#projects .title,
+#projects .title a {
+    display: flex;
+    align-items: center;
+}
+
+#projects .title .github {
+    margin-left: 1rem;
+    border: 1px solid var(--accent-color);
+    padding: 3px 5px;
+    padding-right: 8px;
+    border-radius: 5px;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+#projects .title .github:hover {
+    color: white;
+    background-color: var(--accent-color);
+    transition: 0.2s ease;
+}
+
+#projects .title .github:active {
+    background-color: darkblue;
+}
+
+#projects i {
+    font-size: 2rem;
+}
+
+#projects .summary {
+    font-size: 1.2rem;
+    color: darkgray;
+}
+
+#projects .card {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+#projects .card figure {
+    min-width: 30%;
+}
+
+#projects .card ul {
+    display: flex;
+    margin-top: 2rem;
+}
+
+#projects .card ul li {
+    background-color: var(--extra-color);
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-right: 10px;
+}
+
+#contact {
+    background-color: var(--primary-color);
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+#contact .flex {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+footer {
+    background-color: var(--accent-color);
+    padding: 10px 0;
+}
+
+footer .container {
+    padding: 10px 20px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .hits img {
+    box-shadow: none;
+}
